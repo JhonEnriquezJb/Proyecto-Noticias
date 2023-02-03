@@ -1,0 +1,13 @@
+@mixin grid($columnas, $espacio){
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $espacio;
+
+        @media screen and(max-width: 480px) {
+            grid-template-columns: 1fr;
+            gap: 0em;
+        }
+}
+main {
+    @include grid(4, 1em);
+} 

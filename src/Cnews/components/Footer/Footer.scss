@@ -1,0 +1,38 @@
+.Footer {
+    margin-top: 3rem;
+    font-size:1rem;
+    color: #d9dbd9;
+    display: flex;
+    justify-content: center;
+    background-color: #232b2b;
+    border-top: 1px solid #d9dbd9;
+    padding: 1rem;
+
+    :not(:last-child){
+        margin-right: 3rem;
+    }
+    &-item{
+        position: relative;
+        cursor: pointer;
+        transition: all 0.5s;
+
+        &:hover{
+            transform: translateY(-.3rem);
+            color: white;
+            &::after{
+                width: 100%;
+                left: 0;
+            }
+        }
+        &::after{
+            content: '';
+            display: flex;
+            height: .3rem;
+            width: 0;
+            background-color: white;
+            position: absolute;
+            left: 50%;
+            transition: all .4s;
+        }
+    }
+}
